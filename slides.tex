@@ -1,0 +1,127 @@
+\documentclass{beamer}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+
+%----------▼▼▼▼▼ START PREAMBLE ▼▼▼▼▼----------
+
+%-------- theme --------
+\usepackage{seu}
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+%-------- font --------
+\setbeamerfont{title}{family=\rm}
+\usefonttheme{serif} % default family is serif
+
+%-------- packages to be used -------
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm}
+\usepackage{graphicx,xcolor,comment}
+\usepackage{mathrsfs} 
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{caption}
+\usepackage[english]{babel}
+\usepackage{rotating}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{csquotes}
+
+%-------- for bibliography -----------------
+\usepackage[backend=bibtex, style=ieee]{biblatex}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\addbibresource{References.bib}
+\setbeamertemplate{frametitle continuation}{\frametitle{\color{white}List of References}}
+
+%-------- SEU Backgound -------------------
+\usebackgroundtemplate{%
+	\tikz[overlay,remember picture] \node[opacity=0.02, at=(current page.center)] {
+		\includegraphics[height=4.5in,width=4.5in]{./img/logoseu.jpg}};
+}
+
+%----------▲▲▲▲▲ PREAMBLE END ▲▲▲▲▲----------
+
+%---------START EDITING HERE---------------------
+\title[Outer-connected Edge Domination in Graphs]{Outer-connected Edge Domination in Graphs}
+
+\author [Hanshi Sun]{\textbf{Hanshi Sun}}
+
+\institute[Southeast University] {
+	School of Electronic Science \& Engineering \\ Southeast University\\ \medskip \emph{preminstrel@seu.edu.cn}} 
+	\date{May 21, 2022}
+\titlegraphic{\includegraphics[scale=0.13]{./img/logowhitebg.png}}
+%--------- START DOCUMENT ------------------
+\begin{document}
+
+\begin{frame}{\titlepage}\end{frame}
+\begin{frame}{\frametitle{Presentation Outline}\tableofcontents}\end{frame}
+%--------- INTRODUCTION ----------------------
+\section{Introduction}
+\begin{frame}
+    \frametitle{Introduction}
+    \justifying
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut imperdiet lorem. Sed imperdiet sit amet quam sit amet molestie. Curabitur elementum magna sem, eu viverra augue pharetra quis. Phasellus ut turpis vel nunc fermentum ornare. Maecenas sit amet semper leo. Praesent sodales vel lectus sed hendrerit.
+\end{frame}
+%---------- DEFINITION/PRELIMINARY ---------------------
+\section{Working Definitions}
+\begin{frame}
+    \frametitle{Working Definitions}
+    \begin{definition}\label{d19} A  set $M \subseteq E(G)$ is an \emph{edge dominating set of $G$} if every $u \in E(G) \backslash M$ is adjacent to some $v \in M$. The \emph{edge domination number of $G$}, denoted by $\gamma_{e}(G)$, is the minimum cardinality of an edge dominating set of $G$. Any edge dominating set of $G$ with cardinality $\gamma_{e}(G)$ is referred to as a \emph{$\gamma_{e}$-set of $G$}.
+    \end{definition}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Working Definitions (Cont'n)}
+    \begin{example}
+        \justifying
+        The sets $M_{1}=\{a, c, f\}, M_{2}=\{d, h\}$, and $M_{3}=\{a, e, g, h\}$ are edge dominating sets of $G$ in Figure 1.5. Moreover, $M_{2}=\{d, h\}$ is a minimum edge dominating set of $G$. Thus, $\gamma_{e}(G)=\left|M_{2}\right|=2$ \cite{arumugam2009connected}.
+        \begin{figure}[ht]
+            \centering
+            \captionsetup{justification=centering}
+            \caption{A graph $G$ with $\gamma_{e}(G)=2$.\label{edom}}
+        \end{figure}
+    \end{example}
+\end{frame}
+
+
+
+%----------- REFERENCES  -------------
+%----------- No editing in references section ----------
+%----------- edit only in References.bib ----------
+\begin{frame}[allowframebreaks]
+    \justifying
+    \frametitle{References}
+    \printbibliography
+\end{frame}
+%--------- Fin Text --------------------------
+\begin{frame}
+    \centering
+    \begin{center}
+        {\Huge\calligra Fin.}\\ \vspace*{2em}
+        \Huge\emph{Thank You.}
+    \end{center}
+\end{frame}
+%----------------------------------------------------
+\end{document}
