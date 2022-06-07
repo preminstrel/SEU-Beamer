@@ -6,8 +6,8 @@ Simple Beamer Template for SEU.
 
 ## Demo
 
-[Demo (English)]() | Demo (中文)
+[Demo (English)](https://github.com/preminstrel/SEU-Beamer/blob/master/demo/example_en.pdf) | [Demo (中文)](https://github.com/preminstrel/SEU-Beamer/blob/master/demo/example_cn.pdf)
 
-![demo_1](C:\Users\12647\Desktop\SEU-Beamer\demo\demo_1.png)
+![demo_1](demo/demo_1.png)
 
-![demo_2](C:\Users\12647\Desktop\SEU-Beamer\demo\demo_2.png)
+![demo_2](demo/demo_2.png)
